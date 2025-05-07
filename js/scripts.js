@@ -30,7 +30,7 @@ const products = {
   
         // Sanitize variant name for image URL
         const imageName = variant.name;
-        const imageUrl = `assets/images/${imageName}.jpeg`; // Update with your image path
+        const imageUrl = `Kaustubh_Chavan_IIMB_24120421_Website_Final/assets/images/${imageName}.jpeg`; // Update with your image path
   
         col.innerHTML = `
           <div class="product-card h-100">
