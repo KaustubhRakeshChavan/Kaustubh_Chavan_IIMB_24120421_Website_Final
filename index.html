@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Crunch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sweet Crunch</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <button id="cartButton" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cartModal">
+              Cart (<span id="cartCount">0</span> items)
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section text-center text-white bg-dark py-5">
+    <div class="container">
+      <h1>Healthy & Delicious Snacks</h1>
+      <p>Enjoy the crunch in every bite with our variety of products.</p>
+      <a href="#products" class="btn btn-primary">Explore Our Products</a>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="bg-light py-5" id="products">
+    <div class="container text-center">
+      <h2>Our Products</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Cakes">
+            <img src="assets/images/Cake.jpeg" class="img-fluid rounded" alt="Cake">
+            <h5 class="mt-2">Cakes</h5>
+            <p>Baking Happiness.One Slice at a time.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Snacks">
+            <img src="assets/images/Snacks.jpeg" class="img-fluid rounded" alt="Snacks">
+            <h5 class="mt-2">Snacks</h5>
+            <p>From Oven to Heart-Taste the Warmth.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-item" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Accessories">
+            <img src="assets/images/Accessories.jpeg" class="img-fluid rounded" alt="Accessories">
+            <h5 class="mt-2">Birthday Accessories</h5>
+            <p>Celebrate Life's Sweetest Moments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="card p-4">
+        <h3>Contact Us</h3>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" />
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" />
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <button class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Sweet Crunch. All rights reserved.</p>
+  </footer>
+
+  <!-- Product Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Product Variants</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row" id="productCards"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Cart</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row" id="cartItems"></div>
+          <div class="d-flex justify-content-between mt-3">
+            <strong>Total Items: <span id="totalItems">0</span></strong>
+            <strong>Total Price: Rs. <span id="totalPrice">0.00</span></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
